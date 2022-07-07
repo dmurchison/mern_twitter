@@ -25,12 +25,6 @@ app.use(passport.initialize());
 require('./config/passport')(passport);
   
 app.get("/", (req, res) => {
-  const user = new User({
-    handle: "User1",
-    email: "user@email.com",
-    password: "password"
-  })
-  user.save();
   res.send("Welcome to MERN Twitter!");
 });
 
